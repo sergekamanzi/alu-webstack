@@ -39,3 +39,5 @@ backend http_back
     redirect scheme https if !{ ssl_fc }
     server 5854-web-01 34.201.99.46:80
     server 5854-web-02 54.87.32.168:80
+backend letsencrypt-backend
+        server letsencrypt 127.0.0.1:54321
